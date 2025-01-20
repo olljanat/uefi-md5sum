@@ -16,6 +16,7 @@ env:
   GCC5_ARM_PREFIX: arm-linux-gnueabi-
   GCC5_AARCH64_PREFIX: aarch64-linux-gnu-
   GCC5_RISCV64_PREFIX: riscv64-linux-gnu-
+  GCC5_LOONGARCH64_PREFIX: loongarch64-linux-gnu-
 
 jobs:
   Linux-EDK2-Build:
@@ -41,6 +42,9 @@ jobs:
         - TARGET_TYPE: riscv64
           TARGET_ARCH: RISCV64
           TARGET_PKGS: gcc-riscv64-linux-gnu
+        - TARGET_TYPE: loongarch64
+          TARGET_ARCH: LOONGARCH64
+          TARGET_PKGS: gcc-loongarch64-linux-gnu
 
     steps:
     - name: Check out repository

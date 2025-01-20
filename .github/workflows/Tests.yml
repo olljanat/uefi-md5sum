@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         include:
-        # NB: Qemu doesn't support -smbios for RISCV64, so we don't run the tests there
+        # NB: Qemu doesn't support -smbios for RISCV64 or LOONGARCH64, so we don't run the tests there
         - TARGET_TYPE: x64
           TARGET_PKGS: qemu-system-x86
           QEMU_ARCH: x86_64
